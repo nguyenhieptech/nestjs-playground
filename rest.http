@@ -1,0 +1,19 @@
+# GET cats request
+GET http://localhost:3333/api/cats
+###
+
+# GET cat request
+GET http://localhost:3333/api/cats/3
+###
+
+# POST cat request
+POST http://localhost:3333/api/cats
+###
+
+# PATCH cat request
+PATCH http://localhost:3333/api/cats/1
+###
+
+# DELETE request
+DELETE http://localhost:3333/api/cats/3
+###
