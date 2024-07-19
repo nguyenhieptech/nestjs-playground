@@ -6,8 +6,6 @@ import { FastifyRequest, FastifyReply } from 'fastify';
 export class LoggerGetMiddleware implements NestMiddleware {
   use(req: FastifyRequest['raw'], res: FastifyReply['raw'], next: () => void) {
     console.log('Fastify Middleware for GET methods...');
-    console.log('FastifyRequest', req);
-    console.log('FastifyReply', res);
     next();
   }
 }
