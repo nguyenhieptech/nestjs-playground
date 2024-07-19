@@ -1,14 +1,14 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
-import { CreateCatDto } from './dto/create-cat.dto';
-import { UpdateCatDto } from './dto/update-cat.dto';
-import { Cat } from './entities/cat.entity';
+import { Injectable, NotFoundException } from "@nestjs/common";
+import { CreateCatDto } from "./dto/create-cat.dto";
+import { UpdateCatDto } from "./dto/update-cat.dto";
+import { Cat } from "./entities/cat.entity";
 
 @Injectable()
 export class CatsService {
   private cats: Cat[] = [
-    { id: 1, name: 'Kitty', age: 1 },
-    { id: 2, name: 'Luna', age: 2 },
-    { id: 3, name: 'Sam', age: 3 },
+    { id: 1, name: "Kitty", age: 1 },
+    { id: 2, name: "Luna", age: 2 },
+    { id: 3, name: "Sam", age: 3 },
   ];
 
   create(createCat: CreateCatDto) {
