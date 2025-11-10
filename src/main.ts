@@ -1,7 +1,7 @@
+import { AppModule } from "./app.module";
 import { NestFactory } from "@nestjs/core";
 import { FastifyAdapter, NestFastifyApplication } from "@nestjs/platform-fastify";
 import { SwaggerModule, DocumentBuilder } from "@nestjs/swagger";
-import { AppModule } from "./app.module";
 
 async function bootstrap() {
   // https://docs.nestjs.com/techniques/performance#adapter
