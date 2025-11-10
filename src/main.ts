@@ -1,26 +1,26 @@
-import { NestFactory } from '@nestjs/core';
-import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify';
-import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
-import { AppModule } from './app.module';
+import { AppModule } from "./app.module";
+import { NestFactory } from "@nestjs/core";
+import { FastifyAdapter, NestFastifyApplication } from "@nestjs/platform-fastify";
+import { SwaggerModule, DocumentBuilder } from "@nestjs/swagger";
 
 async function bootstrap() {
   // https://docs.nestjs.com/techniques/performance#adapter
   const app = await NestFactory.create<NestFastifyApplication>(AppModule, new FastifyAdapter());
 
   // https://docs.nestjs.com/faq/global-prefix
-  app.setGlobalPrefix('api');
+  app.setGlobalPrefix("api");
 
   // https://docs.nestjs.com/security/cors
   app.enableCors();
 
   // https://docs.nestjs.com/openapi/introduction
   const config = new DocumentBuilder()
-    .setTitle('Fastify NestJS')
-    .setDescription('Fastify NestJS API description')
-    .setVersion('0.1.0')
+    .setTitle("Fastify NestJS")
+    .setDescription("Fastify NestJS API description")
+    .setVersion("0.1.0")
     .build();
   const document = SwaggerModule.createDocument(app, config);
-  SwaggerModule.setup('swagger', app, document);
+  SwaggerModule.setup("swagger", app, document);
 
   await app.listen(3333);
 }
