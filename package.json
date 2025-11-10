@@ -1,7 +1,7 @@
 {
-  "name": "nestjs-fastify-practice",
+  "name": "nestjs-playground",
   "version": "0.1.0",
-  "description": "",
+  "description": "NestJS Playground",
   "author": "",
   "private": true,
   "license": "UNLICENSED",
