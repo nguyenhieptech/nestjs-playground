@@ -1,5 +1,5 @@
+import { FastifyReply, FastifyRequest } from "fastify";
 import { Injectable, NestMiddleware } from "@nestjs/common";
-import { FastifyRequest, FastifyReply } from "fastify";
 
 // https://docs.nestjs.com/techniques/performance#middleware
 @Injectable()

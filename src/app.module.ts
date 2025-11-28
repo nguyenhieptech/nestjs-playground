@@ -2,10 +2,10 @@ import { MiddlewareConsumer, Module, NestModule, RequestMethod } from "@nestjs/c
 import { AppController } from "./app.controller";
 import { AppService } from "./app.service";
 import { CatsModule } from "./cats/cats.module";
-import { LoggerGetMiddleware } from "./middlewares/logger-get.middleware";
-import { LoggerPostMiddleware } from "./middlewares/logger-post.middleware";
-import { LoggerPatchMiddleware } from "./middlewares/logger-patch-middleware";
 import { LoggerDeleteMiddleware } from "./middlewares/logger-delete-middleware";
+import { LoggerGetMiddleware } from "./middlewares/logger-get.middleware";
+import { LoggerPatchMiddleware } from "./middlewares/logger-patch-middleware";
+import { LoggerPostMiddleware } from "./middlewares/logger-post.middleware";
 
 @Module({
   imports: [CatsModule],
